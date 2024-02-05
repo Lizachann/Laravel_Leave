@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PizzaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/admin', function () {
+    return view('admin\adminDashboard');
+});
+
+// acess qury parameter
 Route::get('/', function () {
-    return view('welcome');
+    
+    return view('login');
+});
+
+Route::controller(PizzaController::class)->group(function(){
+    Route::get('/test', 'index');
+    Route::get('/test/{id}', 'show');
+    
 });
