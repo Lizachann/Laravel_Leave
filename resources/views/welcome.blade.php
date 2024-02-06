@@ -8,9 +8,9 @@
 
     <h1 class="text-4xl"> Pizza List </h1>
 
-    <p>{{ $name }}</p>
+    {{-- <p>{{ $name }}</p> --}}
 
-    @foreach($pizzas as $pizza)
+    {{-- @foreach($pizzas as $pizza)
     <div class="">
         {{ $loop->index}} {{$pizza['type']}} - {{$pizza['base']}}
         @if($loop -> first )
@@ -20,7 +20,17 @@
         <span>last in loop</span>
         @endif
     </div>
+    @endforeach --}}
+    @forelse($employees as $employee)
+    @if($employee->emp_id == 2)
+
+    {{$employee->FirstName}}
+    @endif
+
     @endforeach
+
+
+
 
 </div>
 
