@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('tblleave', function (Blueprint $table) {
             $table->id();
-            $table->string('LeaveType');
+            $table->string('LeaveType',);
             $table->float('ResquestedDays');
             $table->float('DaysOutstand');
             $table->string('FromDate');

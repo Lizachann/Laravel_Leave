@@ -15,6 +15,8 @@ use App\Http\Controllers\PizzaController;
 */
 
 
+
+
 Route::get('/admin', function () {
     return view('admin\adminDashboard');
 });

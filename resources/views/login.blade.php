@@ -1,5 +1,5 @@
 @extends('layouts.loginlayout')
-<!-- @section('title','welcome') -->
+{{-- <!-- @section('title','welcome') --> --}}
 
 
 @section('content')
