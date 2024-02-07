@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tblleave', function (Blueprint $table) {
+        Schema::create('tblleaves', function (Blueprint $table) {
             $table->id();
-            $table->string('LeaveType',);
+            $table->string('LeaveType');
             $table->float('ResquestedDays');
             $table->float('DaysOutstand');
             $table->string('FromDate');
@@ -44,6 +44,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tblleave');
+        Schema::dropIfExists('tblleaves');
     }
 };

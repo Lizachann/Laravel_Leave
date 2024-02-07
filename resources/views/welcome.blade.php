@@ -28,6 +28,24 @@
     @endif
 
     @endforeach
+<br>
+    @forelse($leaves as $leave)
+    @if($leave->id == 94)
+
+    {{$leave->WorkCovered}}
+    @endif
+
+    @endforeach
+
+    <br>
+
+    @forelse($departments as $department)
+    @if($department->id == 5)
+
+    {{$department->DepartmentName}}
+    @endif
+
+    @endforeach
 
 
 

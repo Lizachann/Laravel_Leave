@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tblemployees;
+use App\Models\Tblleaves;
+use App\Models\Tbldepartments;
 
 class PizzaController extends Controller
 {
@@ -17,14 +19,22 @@ class PizzaController extends Controller
         // $pizzas=pizza::all();
 
         $employees = Tblemployees::all() ;
+        $leaves = Tblleaves::all();
+        $departments = Tbldepartments::all();
         
           return view('welcome', 
           [
             //   'pizzas' => $pizzas,
             //   'name' => request('name')
-            'employees' => $employees
+            'employees' => $employees,
+            'leaves' => $leaves,
+            'departments' => $departments
               
           ] );
+        
+        //
+        // return view('welcome', 
+        // ['leaves' => $leaves]);
           
     }
     
